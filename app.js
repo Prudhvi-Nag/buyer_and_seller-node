@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const sellerRoutes = require("./routes/seller.route");
 const propertyRoutes = require("./routes/property.route");
-
+// bhargavi
 dotenv.config();
 
 const app = express();
