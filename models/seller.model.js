@@ -36,11 +36,6 @@ const buyerModel = new mongoose.Schema(
       enum: ["NONE", "MALE", "FEMALE", "OTHERS"],
       required: [true, "Please select a Gender"],
     },
-    role: {
-      type: String,
-      trim: true,
-      default: "Buyer",
-    },
     properties: [
       {
         type: mongoose.Schema.Types.ObjectId,
