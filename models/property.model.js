@@ -15,14 +15,26 @@ const propertySchema = new mongoose.Schema(
       type: Number,
       required: [true, "Please add the number of bathrooms"],
     },
-    hospitalsNearby: {
-      type: [String],
-      required: [true, "Please add nearby hospitals"],
-    },
-    collegesNearby: {
-      type: [String],
-      required: [true, "Please add nearby colleges"],
-    },
+    // hospitalsNearby: {
+    //   type: [String],
+    //   required: [true, "Please add nearby hospitals"],
+    // },
+    // collegesNearby: {
+    //   type: [String],
+    //   required: [true, "Please add nearby colleges"],
+    // },
+    hospitalsNearby: [
+      {
+        type: mongoose.Schema.Types.Mixed,
+        required: [true, "Please add nearby hospitals"],
+      },
+    ],
+    collegesNearby: [
+      {
+        type: mongoose.Schema.Types.Mixed,
+        required: [true, "Please add nearby colleges"],
+      },
+    ],
   },
   {
     timestamps: true,
