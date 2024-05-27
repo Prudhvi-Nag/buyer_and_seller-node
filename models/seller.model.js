@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const buyerModel = new mongoose.Schema(
+const sellerModel = new mongoose.Schema(
   {
     fullName: {
       type: String,
@@ -38,7 +38,7 @@ const buyerModel = new mongoose.Schema(
     },
     properties: [
       {
-        type: mongoose.Schema.Types.ObjectId,
+        type: Object,
         ref: "Property",
       },
     ],
@@ -48,4 +48,4 @@ const buyerModel = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("Seller", buyerModel);
+module.exports = mongoose.model("Users", sellerModel);

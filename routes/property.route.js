@@ -14,7 +14,7 @@ const router = express.Router();
 router.use(userAuth);
 
 router.route("/create").post(createProperty);
-router.route("/details").post(getProperties);
+router.route("/details").get(getProperties);
 router
   .route("/details/:id")
   .get(getPropertieById)
